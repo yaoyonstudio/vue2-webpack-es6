@@ -1,11 +1,8 @@
 var path = require("path")
 var webpack = require("webpack")
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
-const extractSCSS = new ExtractTextPlugin({filename: 'css/style.css', disable: false, allChunks: true})
-
+var extractSCSS = new ExtractTextPlugin({filename: 'css/style.css', disable: false, allChunks: true})
 var PRODUCTION = process.env.NODE_ENV === 'production'
-
-process.traceDeprecation = true
 
 var config = {
 	context: path.join(__dirname, "src"),
